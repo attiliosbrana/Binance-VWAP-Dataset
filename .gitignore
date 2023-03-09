@@ -1,0 +1,3 @@
+data_download/data/*
+data_download/download_tracking/*
+__pycache__/
