@@ -107,7 +107,18 @@ Python version: 3.10.8 | packaged by conda-forge | (main, Nov 22 2022, 08:26:04)
 
 Pickle version 4.0
 
+## How to cite this
+
+If you use this dataset in your research, please cite it using the following citation:
+
+Sbrana, A. (2023). Binance VWAP Dataset [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7749449
+
+You may also want to specify the date you accessed the dataset, as it is subject to updates:
+
+Accessed on [Month Day, Year].
+
 ## References
 
 - [1] Sbrana, A., & Lima de Castro, P. A. (2023, February 23). N-BEATS Perceiver: A Novel Approach for Robust Cryptocurrency Portfolio Forecasting (Version 1) [Preprint]. Research Square. https://doi.org/10.21203/rs.3.rs-2618277/v1
 - [2] Sbrana, A. (2023, March 18). Binance Portfolio Forecasting Hourly VWAP Dataset. https://doi.org/10.17605/OSF.IO/FJSUH
+- [3] Sbrana, A. (2023, March 18). Binance-VWAP-Dataset. GitHub, Zenodo. https://doi.org/10.5281/zenodo.7749449
