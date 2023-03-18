@@ -121,4 +121,4 @@ Accessed on [Month Day, Year].
 
 - [1] Sbrana, A., & Lima de Castro, P. A. (2023, February 23). N-BEATS Perceiver: A Novel Approach for Robust Cryptocurrency Portfolio Forecasting (Version 1) [Preprint]. Research Square. https://doi.org/10.21203/rs.3.rs-2618277/v1
 - [2] Sbrana, A. (2023, March 18). Binance Portfolio Forecasting Hourly VWAP Dataset. https://doi.org/10.17605/OSF.IO/FJSUH
-- [3] Sbrana, A. (2023, March 18). Binance-VWAP-Dataset. GitHub, Zenodo. https://doi.org/10.5281/zenodo.7749449
+- [3] Sbrana, A., Pires, G. (2023, March 18). Binance-VWAP-Dataset. GitHub, Zenodo. https://doi.org/10.5281/zenodo.7749449
