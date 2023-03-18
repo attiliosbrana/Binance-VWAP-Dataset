@@ -1,10 +1,46 @@
 # Binance Portfolio Forecasting Hourly VWAP Dataset
 
-The Binance Portfolio Forecasting Hourly VWAP Dataset provides a unique collection of historical cryptocurrency price data from Binance, the largest cryptocurrency exchange platform. The dataset includes data for 506 unique cryptocurrencies denominated in USD and has been preprocessed to calculate the hourly volume-weighted average price (VWAP) for each cryptocurrency. The dataset is useful for time series forecasting as VWAP is a more relevant indicator than just raw data points. The VWAP is calculated using the formula: ∑(price * volume) / ∑(volume). The dataset also encompasses many currency pairs for the VWAP calculation that are not available elsewhere. These series represent better, longer, and more consistent data series on historical currency prices. For example, some currencies were only traded against ETH for some time, and only years later started to trade against USD-equivalent pairs. This dataset manages to regain those USD-equivalent volume-weighted prices to train models on the true volatility of these cryptos. The dataset has been pre-processed, including forward-filling missing data points to maintain the continuity of the time series and prevent any disruptions in downstream analysis.
+The Binance Portfolio Forecasting Hourly VWAP Dataset is a collection of historical cryptocurrency price data from Binance, the largest cryptocurrency exchange platform. The dataset includes data for 506 unique cryptocurrencies denominated in USD and has been pre-processed to maintain the continuity of the time series and prevent any disruptions in downstream analysis. The dataset is available for download in the OSF database [1] and has been used in the N-BEATS Perceiver paper [2].
 
-The dataset provides a Python dictionary serialized using the pickle format. It includes a 2D numpy array representing the historical hourly VWAP prices for each cryptocurrency, a 1D numpy array representing the tickers of the 506 cryptocurrencies in the series array, a 1D numpy array representing the dates in Unix time (milliseconds) of each hourly observation in the series array, a 2D numpy array representing the metadata of dates of hour, weekday, and day of the month, respectively, and several other useful elements for the dataset.
+## Objective
 
-Overall, this dataset is a unique and valuable resource for researchers and practitioners interested in cryptocurrency trading, machine learning, and time series analysis. It provides a standardized, pre-processed, and consistent data series for over 500 cryptocurrencies, encompassing many currency pairs for the VWAP calculation that are not available elsewhere, enabling users to train more accurate and robust models for cryptocurrency price forecasting.
+The objective of this repository is to provide a standardized, pre-processed, and consistent data series for over 500 cryptocurrencies. The repository aims to enable users to train more accurate and robust models for cryptocurrency price forecasting. The repository is structured into several directories, each of which contains code and data for a specific task related to the dataset. Specifically, the repository allows users to:
+
+-   replicate the exact same dataset,
+-   update the dataset for new data,
+-   provide tools for using the dataset for sampling random portfolios with proper indexing so these can be used in different applications, such as machine learning or portfolio optimization, and
+-   compare new models with the models in the N-BEATS Perceiver paper, using the exact same dataset of over 4 million test samples.
+
+
+## Directory Structure
+
+The repository is organized into several directories, each with its own detailed README file. These directories are:
+
+### benchmarking/
+
+This directory contains code for benchmarking new methods against the test set used in the paper N-BEATS Perceiver. It includes a Jupyter notebook `benchmark_example.ipynb` for testing user-defined models against the test files, as well as a Python module `metrics_fast.py` containing functions for calculating various metrics used in time series analysis.
+
+### download_data/
+
+This directory contains code for regularly updating cryptocurrency data from Binance and preprocessing it as VWAPs. The code includes several Python scripts for downloading data and getting available denominations for each cryptocurrency. The scripts in this directory allow users to download and preprocess the data themselves, thereby ensuring the dataset is up to date with the latest available data.
+
+### pre-processing/
+
+This directory contains code for preprocessing raw data from Binance into VWAPs. The code includes several Python scripts for calculating VWAPs for various cryptocurrencies and generating training and testing data for cryptocurrency portfolio forecasting. The scripts in this directory enable users to preprocess the raw data into VWAPs and to generate training and testing data in a format that is compatible with the N-BEATS Perceiver paper.
+
+### sampler/
+
+This directory contains optimized functions for normalizing a random portfolio to the index of 1 at the last observation using vector operations under the Numba library. The directory includes a Jupyter notebook `sample_notebook.py` for implementing the functions and generating training and testing data for cryptocurrency portfolio forecasting. The scripts in this directory allow users to normalize a random portfolio to the index of 1 and generate training and testing data for cryptocurrency portfolio forecasting.
+
+Each directory contains a README file with more detailed information about the code and data it contains.
+
+## The Binance VWAP Dataset
+
+The dataset can be downloaded manually at the OSF (https://osf.io/fjsuh/) repository under the name `binance_dataset_original_20220112.pkl` or fetched with the file in `/sampler/sample_notebook.ipynb`.
+
+The dataset provides a unique and valuable resource for researchers and practitioners interested in cryptocurrency trading, machine learning, and time series analysis. The dataset is useful for time series forecasting as volume-weighted average price (VWAP) is a more relevant indicator than just raw data points. The VWAP is calculated using the formula: ∑(price * volume) / ∑(volume). The dataset also encompasses many currency pairs for the VWAP calculation that are not available elsewhere. These series represent better, longer, and more consistent data series on historical currency prices. For example, some currencies were only traded against ETH for some time, and only years later started to trade against USD-equivalent pairs. This dataset manages to regain those USD-equivalent volume-weighted prices to train models on the true volatility of these cryptos. The dataset has been pre-processed, including forward-filling missing data points to maintain the continuity of the time series and prevent any disruptions in downstream analysis.
+
+The dataset is provided as a Python dictionary serialized using the pickle format. It includes a 2D numpy array representing the historical hourly VWAP prices for each cryptocurrency, a 1D numpy array representing the tickers of the 506 cryptocurrencies in the series array, a 1D numpy array representing the dates in Unix time (milliseconds) of each hourly observation in the series array, a 2D numpy array representing the metadata of dates of hour, weekday, and day of the month, respectively, and several other useful elements for the dataset.
 
 Table: Periods and Assets used in the study
 
@@ -24,7 +60,6 @@ Table: Periods and Assets used in the study
 -   The VWAP is calculated using the formula: ∑(price * volume) / ∑(volume).
 -   The dataset also provides the oldest date, newest date, and length of the data available for each cryptocurrency.
 
-
 ## Data Structure
 
 The dataset is provided as a Python dictionary serialized using the pickle format. The keys and values in the dictionary are as follows:
@@ -43,13 +78,13 @@ The dataset is provided as a Python dictionary serialized using the pickle forma
 
 ## Usage
 
-To load the dataset, you can use the following Python code:
+To load the dataset, users can use the following Python code:
 
 ```python
 import pickle
 
 # Load the dataset from file
-with open('binance_dataset.pkl', 'rb') as f:
+with open('binance_dataset_original_20220112.pkl', 'rb') as f:
     data = pickle.load(f)
 
 # Access the different elements of the dataset
@@ -71,3 +106,8 @@ test_eligible = data['test_eligible']
 Python version: 3.10.8 | packaged by conda-forge | (main, Nov 22 2022, 08:26:04) [GCC 10.4.0]
 
 Pickle version 4.0
+
+## References (APA Style)
+
+- [1] Attilio Sbrana, Paulo André Lima de Castro. N-BEATS Perceiver: A Novel Approach for Robust Cryptocurrency Portfolio Forecasting, 23 February 2023, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-2618277/v1]
+- [2] Sbrana, A. (2023, March 18). Binance Portfolio Forecasting Hourly VWAP Dataset. https://doi.org/10.17605/OSF.IO/FJSUH
