@@ -37,7 +37,6 @@ def main():
 
     # Check for new symbols that do not have kline data yet
     new_tickers = check_new_symbols(existing_tickers, symbols)
-    # new_tickers = new_tickers[:10] #------------------------------------------ONLY 10 SAMPLE TICKERS----------------------------------------------------------->>>> REMOVE THIS EVENTUALLY!!! THIS IS FOR TESTING ONLY
 
     # Check for symbols that do not have trackers yet
     new_trackers = check_new_symbols(trackers_tickers, symbols)
@@ -60,8 +59,6 @@ def main():
                                     new_tickers, num_symbols, args.intervals, args.years, args.months, \
                                     args.startDate, args.endDate, args.folder, args.checksum
         
-        # years = ['2023'] #------------------------------------------------ONLY FOR 2023----------------------------------------------------->>>> REMOVE THIS EVENTUALLY!!! THIS IS FOR TESTING ONLY
-
         # Download kline data and save download tracking information for each new symbol
         for symbol in new_tickers:
             # Create dictionary to hold download tracking information for each interval

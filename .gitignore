@@ -1,3 +1,12 @@
 data_download/data
 data_download/download_tracking
 __pycache__/
+sampler/binance_dataset_original_20220112.pkl
+.ipynb_checkpoints/
+pre-processing/assets.pkl
+.virtual_documents/
+data_download/base_assets.pkl
+benchmarking/test_samples_7L_split1.pkl
+benchmarking/test_samples_7L_split2.pkl
+benchmarking/test_samples_7L_split3.pkl
+nohup.out
