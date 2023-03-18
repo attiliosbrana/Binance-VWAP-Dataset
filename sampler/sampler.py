@@ -258,27 +258,6 @@ def append(a, b):
     """
     return np.append(a, b)
 
-# @njit
-# def build_random_portfolios(main_token_idx, compatibility, series, backcast_start, backcast_end,
-#                      forecast_start, forecast_end, date):
-    
-#     compatibles = compatibility[main_token_idx]
-#     num_of_tokens, tokens_idx = random_assets(compatibles, main_token_idx)
-    
-#     backcasts = slices(series, tokens_idx, backcast_start, backcast_end)
-#     forecasts = slices(series, tokens_idx, forecast_start, forecast_end)
-
-#     normalized_backcasts = normalize(backcasts)
-#     normalized_forecasts = normalize(forecasts)
-
-#     weights = clean_up_weights(random_weights(num_of_tokens + 1))
-
-#     portfolio_backcast = weighted_port(normalized_backcasts, weights)
-#     portfolio_forecast = weighted_port(normalized_forecasts, weights)
-    
-#     portfolio_backcast = append(portfolio_backcast, date)
-#     return portfolio_backcast, portfolio_forecast
-
 @njit
 def build_random_portfolios(main_token_idx, compatibility, series, backcast_start, backcast_end,
                      forecast_start, forecast_end, date):
