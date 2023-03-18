@@ -4,7 +4,7 @@ The Binance Portfolio Forecasting Hourly VWAP Dataset is a collection of histori
 
 ## Objective
 
-The objective of this repository is to provide a standardized, pre-processed, and consistent data series for over 500 cryptocurrencies. The repository aims to enable users to train more accurate and robust models for cryptocurrency price forecasting. The repository is structured into several directories, each of which contains code and data for a specific task related to the dataset. Specifically, the repository allows users to:
+This repository aims to provide a standard, pre-processed, and consistent data series for more than 500 cryptocurrencies. This resource intends to enable users to train more precise and robust algorithms for predicting the price of cryptocurrencies. The repository is organized into multiple folders, with each directory containing code and data for a specific dataset-related activity. In particular, it enables users to:
 
 -   replicate the exact same dataset,
 -   update the dataset for new data,
@@ -107,7 +107,7 @@ Python version: 3.10.8 | packaged by conda-forge | (main, Nov 22 2022, 08:26:04)
 
 Pickle version 4.0
 
-## References (APA Style)
+## References
 
-- [1] Attilio Sbrana, Paulo André Lima de Castro. N-BEATS Perceiver: A Novel Approach for Robust Cryptocurrency Portfolio Forecasting, 23 February 2023, PREPRINT (Version 1) available at Research Square [https://doi.org/10.21203/rs.3.rs-2618277/v1]
+- [1] Sbrana, A., & Lima de Castro, P. A. (2023, February 23). N-BEATS Perceiver: A Novel Approach for Robust Cryptocurrency Portfolio Forecasting (Version 1) [Preprint]. Research Square. https://doi.org/10.21203/rs.3.rs-2618277/v1
 - [2] Sbrana, A. (2023, March 18). Binance Portfolio Forecasting Hourly VWAP Dataset. https://doi.org/10.17605/OSF.IO/FJSUH
