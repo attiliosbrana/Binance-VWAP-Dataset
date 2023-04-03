@@ -10,3 +10,4 @@ benchmarking/test_samples_7L_split1.pkl
 benchmarking/test_samples_7L_split2.pkl
 benchmarking/test_samples_7L_split3.pkl
 nohup.out
+ignore/
