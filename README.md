@@ -1,4 +1,4 @@
-# Binance Portfolio Forecasting Hourly VWAP Dataset
+# Binance Portfolio Forecasting Hourly VWAP Dataset & Code
 
 The Binance Portfolio Forecasting Hourly VWAP Dataset is a collection of historical cryptocurrency price data from Binance, the largest cryptocurrency exchange platform. The dataset includes data for 506 unique cryptocurrencies denominated in USD and has been pre-processed to maintain the continuity of the time series and prevent any disruptions in downstream analysis. The dataset is available for download in the OSF database [1] and has been used in the N-BEATS Perceiver paper [2].
 
