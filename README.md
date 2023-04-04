@@ -102,6 +102,68 @@ test_eligible = data['test_eligible']
 
 ```
 
+## Setting up the Conda environment
+
+This project uses a Conda environment to manage dependencies. To set up the environment, follow the steps below:
+
+1.  Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/distribution) if you haven't already.
+    
+2.  Clone the GitHub repository to your local machine:
+    
+    ```bash
+    
+    git clone https://github.com/your_username/your_repository.git
+    ```
+    
+    Replace `your_username` and `your_repository` with the appropriate values.
+    
+3.  Navigate to the repository's directory:
+    
+    ```bash
+    
+    cd your_repository
+    ```
+    
+    Replace `your_repository` with the appropriate value.
+    
+4.  Create the Conda environment using the `environment.yml` file:
+    
+    ```bash
+    
+    conda env create -f environment.yml
+    ```
+    
+    This command will create a new Conda environment named `binance_vwap_env` and install the required dependencies.
+    
+5.  Activate the new environment:
+    
+    -   On Windows:
+        
+        ```bash
+        
+        conda activate binance_vwap_env
+        ```
+        
+    -   On macOS and Linux:
+        
+        ```bash
+        
+        source activate binance_vwap_env
+        ```
+        
+    
+    You should now see the environment name in the command prompt/terminal.
+    
+6.  You can now run the project's scripts and notebooks in this environment.
+    
+
+To deactivate the Conda environment, use the following command:
+
+```bash
+
+conda deactivate
+```
+
 ## Documentation version info
 Python version: 3.10.8 | packaged by conda-forge | (main, Nov 22 2022, 08:26:04) [GCC 10.4.0]
 
