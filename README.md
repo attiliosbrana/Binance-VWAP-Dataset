@@ -112,7 +112,7 @@ This project uses a Conda environment to manage dependencies. To set up the envi
     
     ```bash
     
-    git clone https://github.com/your_username/your_repository.git
+    git clone https://github.com/attiliosbrana/Binance-VWAP-Dataset.git
     ```
     
     Replace `your_username` and `your_repository` with the appropriate values.
